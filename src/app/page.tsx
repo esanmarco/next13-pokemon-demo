@@ -1,5 +1,5 @@
-import { getPokemonById } from "../server/pokemon";
-import { getRandomPokemonIds } from "../utils/randomId";
+import { getPokemonById } from "@/server/pokemon";
+import { getRandomPokemonIds } from "@/utils/randomId";
 import VoteBlock from "./voteBlock";
 
 const getPokemonsToVoteOn = async () => {

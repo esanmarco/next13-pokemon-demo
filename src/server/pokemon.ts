@@ -1,4 +1,4 @@
-import { API_BASE_URL } from "../utils/const";
+import { API_BASE_URL } from "@/utils/const";
 import { CacheType, Root } from "./models/pokemon";
 
 export const getPokemonById = async (

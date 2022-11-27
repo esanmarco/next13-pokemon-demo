@@ -43,7 +43,7 @@ export interface PokeListing {
   image: string;
 }
 
-interface Response {
+export interface Response {
   name: string;
   url: string;
 }

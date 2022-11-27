@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Ability, Form, Mfe, Root } from "../../../server/models/pokemon";
+import { Ability, Response, Mfe, Root } from "@/server/models/pokemon";
 
 interface PokemonDetailsProps extends Root {}
 
@@ -51,9 +51,9 @@ const ListData = ({
 }: {
   title: string;
   name: string;
-  data: Form[] | Mfe[] | Ability[];
+  data: Response[] | Mfe[] | Ability[];
 }) => {
-  const listName = (obj: Form | Mfe | Ability) => {
+  const listName = (obj: Response | Mfe | Ability) => {
     if (obj.hasOwnProperty("move")) {
       return (obj as Mfe).move.name;
     }
@@ -62,14 +62,14 @@ const ListData = ({
       return (obj as Ability).ability.name;
     }
 
-    return (obj as Form).name;
+    return (obj as Response).name;
   };
 
   return (
     <div className="flex flex-col">
       <p className="mt-0 mb-1 font-bold text-secondary">{title}:</p>
       <p className="flex flex-row flex-wrap gap-1 mt-0 text-xs capitalize">
-        {data.map((d: Form | Mfe | Ability, index: number) => (
+        {data.map((d: Response | Mfe | Ability, index: number) => (
           <span key={`details-item-${name}-${index}`}>
             {listName(d)}
             {index !== data.length - 1 ? ", " : ""}

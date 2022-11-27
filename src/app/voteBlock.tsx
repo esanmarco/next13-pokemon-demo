@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Root } from "../server/models/pokemon";
+import { Root } from "@/server/models/pokemon";
 
 export default function VoteBlock({
   details,

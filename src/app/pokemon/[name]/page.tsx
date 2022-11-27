@@ -1,4 +1,4 @@
-import { getPokemonByName } from "../../../server/pokemon";
+import { getPokemonByName } from "@/server/pokemon";
 import PokemonDetails from "./details";
 
 export default async function DetailsWrapper({
