@@ -1,3 +1,5 @@
+import Sidebar from "./sidebar";
+
 export default function PokemonLayout({
   children,
 }: {
@@ -5,7 +7,9 @@ export default function PokemonLayout({
 }) {
   return (
     <div className="flex flex-row w-screen h-screen">
-      <div className="hidden md:flex">{/** put sidebar here */}</div>
+      <div className="hidden md:flex">
+        <Sidebar />
+      </div>
       <div className="flex flex-col flex-1 p-8">
         <div className="w-full max-w-3xl mx-auto text-sm">{children}</div>
       </div>

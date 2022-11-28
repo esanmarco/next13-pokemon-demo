@@ -1,4 +1,6 @@
 import "@/styles/globals.css";
+import QueryWrapper from "./components/queryWrapper";
+import Navigation from "./navigation";
 
 export default function RootLayout({
   children,
@@ -8,7 +10,12 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="linksquares">
       <head />
-      <body className="prose">{children}</body>
+      <body>
+        <QueryWrapper>
+          <Navigation />
+          {children}
+        </QueryWrapper>
+      </body>
     </html>
   );
 }

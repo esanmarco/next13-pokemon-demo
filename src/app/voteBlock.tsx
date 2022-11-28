@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Root } from "@/server/models/pokemon";
+import InfoModal from "./components/infoModal";
 
 export default function VoteBlock({
   details,
@@ -52,6 +53,8 @@ export default function VoteBlock({
           />
         </label>
       </div>
+
+      <InfoModal pokemon={details} modalId={`modal-details-${name}`} />
     </>
   );
 }

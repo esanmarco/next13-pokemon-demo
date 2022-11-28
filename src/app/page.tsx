@@ -21,9 +21,11 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center md:w-screen md:h-screen">
-      <h1 className="mt-4 text-center md:mt-0">Which Pokémon would win?</h1>
+      <h1 className="mt-4 text-3xl font-bold text-center md:mt-0">
+        Which Pokémon would win?
+      </h1>
 
-      <div className="flex flex-col items-center justify-between max-w-5xl gap-8 p-8 md:flex-row animate-fade-in">
+      <div className="flex flex-col items-center justify-between max-w-5xl gap-8 p-8 mt-10 md:flex-row animate-fade-in">
         {pokemon.map((poke) => {
           return (
             <VoteBlock

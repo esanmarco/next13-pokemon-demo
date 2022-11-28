@@ -1,5 +1,3 @@
-export interface PokeListRaw extends Omit<PokeListing, "image"> {}
-
 export interface Votes {
   id: string;
   createdAt: string;
@@ -37,7 +35,9 @@ export interface Root {
   weight: number;
 }
 
-export interface PokeListing {
+export interface NoImagePartialRoot extends Omit<PartialRoot, "image"> {}
+
+export interface PartialRoot {
   id: number;
   name: string;
   image: string;
