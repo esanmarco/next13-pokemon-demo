@@ -8,7 +8,7 @@ export default function Sidebar() {
 
   return (
     <div className="flex flex-col w-48 overflow-x-hidden overflow-y-auto border-r">
-      <h3 className="px-4 mt-4">All Pokemon</h3>
+      <h3 className="px-4 my-4 font-bold">All Pokemon</h3>
 
       <ul className="p-0 menu menu-compact">
         {pokemon.sort().map((p: NoImagePartialRoot) => {

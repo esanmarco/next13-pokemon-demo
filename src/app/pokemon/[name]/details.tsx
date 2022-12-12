@@ -21,10 +21,10 @@ export default function PokemonDetails({
           alt={name}
           width={150}
           height={150}
-          className={`animate-fade-in mt-0 md:m-0 self-center md:self-start`}
+          className={`animate-fade-in mt-0 self-center md:self-start`}
         />
         <div>
-          <p className="m-0 font-bold text-secondary">
+          <p className="font-bold text-secondary">
             Base Experience: {base_experience}
           </p>
           <p>
