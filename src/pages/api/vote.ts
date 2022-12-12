@@ -24,7 +24,7 @@ export default async function handler(
   }
 
   const query =
-    "INSERT INTO votes (createdAt, votedFor, votedAgainst, votedForName, spriteUrl) VALUES (?, ?, ?, ?, ?)";
+    "INSERT INTO votes (created_at, votedFor, votedAgainst, votedForName, spriteUrl) VALUES (?, ?, ?, ?, ?)";
 
   const params = [
     new Date().toISOString().slice(0, 19).replace("T", " "),
