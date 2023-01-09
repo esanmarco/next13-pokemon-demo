@@ -13,7 +13,7 @@ export default function RootLayout({
       <body>
         <QueryWrapper>
           <Navigation />
-          {children}
+          <div className="w-full prose max-w-none">{children}</div>
         </QueryWrapper>
       </body>
     </html>
