@@ -1,5 +1,5 @@
 "use client";
-import { useVote } from "@/pages/api/vote";
+import useVote from "@/utils/useVote";
 import { useRouter } from "next/navigation";
 
 interface VoteButtonProps {
@@ -27,7 +27,7 @@ export default function VoteButton({
   });
 
   const handleVote = () => {
-    if (!isSuccess && !isLoading) {
+    if (!isLoading && !isSuccess) {
       vote();
     }
   };

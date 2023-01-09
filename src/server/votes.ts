@@ -14,7 +14,7 @@ export interface VoteResults {
 export const getResults = async () => {
   const query = "SELECT * FROM votes";
   const rows = await db(query).then((res) => res.rows);
-  const allVotes: VoteResults = {};
+  let allVotes: VoteResults = {};
 
   rows.forEach(async (row) => {
     const { votedFor, votedAgainst, votedForName, spriteUrl } = row as Votes;
